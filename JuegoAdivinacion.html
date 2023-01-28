@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<h1>  ADIVINA EL NUMERO CORRECTO </h1>
+
+<script>
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	var nombreParticipante = prompt("Hola, ingresa tu nombre: ");
+	var numeroPensado = Math.round(Math.random() * 10 );
+	var numeroLanzado = parseInt(prompt(nombreParticipante + ", Ingrese un numero entre 0-10"));
+
+	if(numeroPensado == numeroLanzado){
+
+		imprimir(nombreParticipante + ", Has acertado!");
+	}
+
+	if(numeroPensado > numeroLanzado){
+
+		imprimir(nombreParticipante + ",  has errado, el numero correcto era mayor que el que acabas de escribir. Intentalo de nuevo! ");
+
+	}
+
+	if(numeroPensado < numeroLanzado){
+
+		imprimir( nombreParticipante + ", has errado, el numero correcto era menor que el que acabas de escribir. Intentalo de nuevo!");
+	}
+
+
+</script>		
+
+  

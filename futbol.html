@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<h1>CALCULANDO PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+
+<script>
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+
+	}	
+
+	var nombreEquipo = prompt("Indique el nombre del equipo");
+    var victorias = parseInt(prompt(nombreEquipo + ", Informe el número de victorias: "));
+	var empates = parseInt(prompt(nombreEquipo + ", Informe la cantidad de empates: "));
+	
+
+	var puntosTotal = victorias	+ empates ;
+
+	imprimir("el total de puntos del equipo " + nombreEquipo + " es: " + puntosTotal + " 	victorias");
+
+	if (puntosTotal > 25) {
+
+		imprimir("El equipo " + nombreEquipo + " está mejor que el año pasado.");
+	}
+
+	if (puntosTotal < 25) {
+
+		imprimir("El equipo " + nombreEquipo + " está peor que el año pasado.");
+	}
+
+	if (puntosTotal == 25) {
+
+		imprimir("El equipo " + nombreEquipo + " está igual que el año pasado.");
+	}
+</script>		
+
+  
